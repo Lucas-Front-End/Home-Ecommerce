@@ -1,0 +1,15 @@
+@import './utils/variables.scss';
+@import './utils/mixins.scss';
+@import './components/header.scss';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font;
+  text-decoration: none;
+  list-style: none;
+}
+img{
+  vertical-align: middle;
+}

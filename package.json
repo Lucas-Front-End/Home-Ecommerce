@@ -4,7 +4,8 @@
   "description": "This is a basic setup to start a new VTEX project. The goal is to maintain a configuration and code pattern. Be free to suggest improvements.",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"gulp serve"
   },
   "author": "Infracommerce",
   "license": "ISC",

@@ -1,0 +1,130 @@
+@import '../utils/variables.scss';
+@import '../utils/mixins.scss';
+
+body.home {
+  main {
+    section.master {
+      &.full-banner-desktop {
+        .container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          position: relative;
+
+          button.slick-arrow {
+            position: absolute;
+            border: solid #fff;
+            border-width: 0 5px 5px 0;
+            padding: 10px;
+            cursor: pointer;
+            width: 10px;
+            height: 10px;
+            background: transparent;
+          }
+
+          button.slick-next.slick-arrow {
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            right: 2%;
+            z-index: 5;
+          }
+
+          button.slick-prev.slick-arrow {
+            transform: rotate(135deg);
+            -webkit-transform: rotate(135deg);
+            left: 2%;
+            z-index: 5;
+          }
+        }
+
+        .draggable {
+          overflow: hidden;
+
+          .slick-track {
+            display: flex;
+
+            .box-banner {
+              img {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+
+      @include mobile {
+        &.full-banner-desktop {
+          display: none !important;
+        }
+
+        &.full-banner-mobile {
+          display: block !important;
+          ul.slick-dots{
+            position: absolute;
+            display: flex;
+            bottom: -30px;
+            li{
+              width: 20px;
+              height: 20px;
+              background: $gray;
+              border-radius: 25px;
+              margin: 0 5px;
+              &.slick-active{
+                background: #8a2be2;
+              }
+              button{
+                border: 0;
+                font-size: 0;
+              }
+            }
+          }
+          .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            button.slick-arrow {
+              position: absolute;
+              border: solid #fff;
+              border-width: 0 5px 5px 0;
+              padding: 10px;
+              cursor: pointer;
+              width: 10px;
+              height: 10px;
+              background: transparent;
+            }
+
+            button.slick-next.slick-arrow {
+              transform: rotate(-45deg);
+              -webkit-transform: rotate(-45deg);
+              right: 2%;
+              z-index: 5;
+            }
+
+            button.slick-prev.slick-arrow {
+              transform: rotate(135deg);
+              -webkit-transform: rotate(135deg);
+              left: 2%;
+              z-index: 5;
+            }
+          }
+
+          .draggable {
+            overflow: hidden;
+
+            .slick-track {
+              display: flex;
+
+              .box-banner {
+                img {
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
