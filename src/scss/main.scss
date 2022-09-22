@@ -1,6 +1,7 @@
 @import './utils/variables.scss';
 @import './utils/mixins.scss';
 @import './components/header.scss';
+@import './components/footer.scss';
 
 *{
   margin: 0;
@@ -11,5 +12,6 @@
   list-style: none;
 }
 img{
+  width: 100%;
   vertical-align: middle;
 }

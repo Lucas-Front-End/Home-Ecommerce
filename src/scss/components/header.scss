@@ -213,8 +213,24 @@ header {
                     align-items: center;
                     width: 100%;
                     margin: 5px 0;
+                    cursor: pointer;
+                    background: #f5f5f5;
+                    z-index: 1;
+                    &:hover{
+                      .sub-departaments{
+                        transition: all 1s ease-in-out;
+                        opacity: 1;
+                        -webkit-animation: sub-departaments 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                        animation: sub-departaments 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                      }
+                    }
                     span{
                       display: flex;
+                      justify-content: flex-end;
+                      align-items: center;
+                      width: 20px;
+                      height: 20px;
+                      cursor: pointer;
                       &::after{
                         content: '';
                         border: solid $black;
@@ -237,21 +253,20 @@ header {
                       padding: 10px 0;
                     }
                     .sub-departaments{
+                      z-index: -1;
                       position: absolute;
                       background: #f5f5f5;
                       width: 250px;
                       right: -100%;
                       top: 0;
                       padding: 20px;
-                      border-left: 1px solid $black;
+                      transition: all 0.5s ease-in-out;
+                      opacity: 0;
                       &>ul li{
                         margin: 5px 0;
                       }
                     }
                   }
-                }
-                .sub-departaments{
-                  display: none;
                 }
               }
 
@@ -312,6 +327,11 @@ header {
                       flex-direction: column;
                       justify-content: flex-start;
                       padding: 0 20px;
+                      .box-banner{
+                        img{
+                          width: 100%;
+                        }
+                      }
 
                       h2 {
                         text-align: center;
@@ -405,7 +425,7 @@ header {
                     &>ul {
                       li {
                         a {
-                          display: flex;
+                          display: inline-flex;
                           font-size: 14px;
                           position: relative;
                           text-transform: uppercase;
@@ -425,7 +445,7 @@ header {
 
                           &:hover {
                             &::after {
-                              width: 50%;
+                              width: 100%;
                               border-bottom: 2px solid $black;
                               transition: all 1s ease-in-out;
                             }
@@ -480,5 +500,17 @@ header {
         }
       }
     }
+  }
+}
+
+
+@keyframes sub-departaments {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: transateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }

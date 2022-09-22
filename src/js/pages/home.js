@@ -26,11 +26,6 @@ $('#departaments svg').click(function(){
   $(this).siblings('.menu-departaments').slideToggle(500);
 });
 
-$('#departaments .menu-departaments .container>ul>li span').click(function(){
-  $(this).parents('li').toggleClass('active').children('.sub-departaments').toggle("slide", { direction: "left" }, 1000)
-  .parent('li.active').siblings().removeClass('active').children('.sub-departaments').hide("slide", { direction: "left" }, 1000)
-});
-
 if(largura > 800){
   $('section.master.full-banner-desktop .container').slick({
     dots: false,
@@ -52,3 +47,37 @@ if(largura > 800){
     arrows: false,
   });
 }
+
+$('section.master.brands .container').slick({
+  dots: false,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 6,
+  slidesToScroll: 1,
+  arrows: true,
+  prevArrow:'<button type="button" class="slick-prev"></button>',
+  nextArrow:'<button type="button" class="slick-next"></button>',
+});
+
+$('section.master.collection .container .prateleira ul').slick({
+  dots: false,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: true,
+  prevArrow:'<button type="button" class="slick-prev"></button>',
+  nextArrow:'<button type="button" class="slick-next"></button>',
+});
+
+$('section.master.collection .container .prateleira ul li .img-product').slick({
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  cssEase: 'linear'
+});
+
